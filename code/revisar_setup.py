@@ -8,6 +8,7 @@
 """
 
 import sys
+import os
 
 print()
 print("=" * 62)
@@ -89,7 +90,10 @@ elif not hasattr(cv2, "CascadeClassifier"):
     print("        pip install opencv-contrib-python")
     problemas.append("Falta CascadeClassifier -> instala opencv-contrib-python")
 else:
-    ruta = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+    carpeta = os.path.dirname(os.path.abspath(__file__))
+    ruta_local = os.path.join(carpeta, "haarcascade_frontalface_default.xml")
+    ruta_bundled = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+    ruta = ruta_local if os.path.exists(ruta_local) else ruta_bundled
     detector = cv2.CascadeClassifier(ruta)
     if detector.empty():
         print("     Estado:    NO SE PUDO CARGAR")
