@@ -7,7 +7,7 @@
 Watch our project in action!!
 
 https://youtube.com/shorts/2wKiuXEPaLc?is=6QFX5N63HF8E_3kh
-
+https://drive.google.com/file/d/1lYg5RBCqTZG77HFatR0raRHDe1pf-lLP/view?usp=sharing
 ## What it does.
 Our military turret uses computer vision to locate your face, then adjusts itself to the centre of your face using a servo motor, and then shoots squishy bullets (cylinders) at you!!
 
